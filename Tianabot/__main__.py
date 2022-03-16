@@ -85,12 +85,12 @@ PM_START_TEXT = """
 *Hᴇʟʟᴏ {} * [!]({})
 ───────────────────────
 × *I'ᴍ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
-× *Could you settle for a smile, and a fond farewell?*
+× *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
 ───────────────────────
 × *Uᴘᴛɪᴍᴇ:* `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
 ───────────────────────
-× *Pᴏᴡᴇʀᴇᴅ Bʏ: Tempest!*
+× *Pᴏᴡᴇʀᴇᴅ Bʏ: Tᴇᴀᴍ Tɪᴀɴᴀ!*
 ───────────────────────"""
 
 buttons = [
@@ -99,7 +99,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="👩‍💻 𝙄𝙣𝙛𝙤", callback_data="about_"),
-        InlineKeyboardButton(text="𝘿𝙤𝙣𝙖𝙩𝙚 💰", url="https://t.me/KIRITO_1240"),
+        InlineKeyboardButton(text="𝘿𝙤𝙣𝙖𝙩𝙚 💰", url="https://t.me/PrincexDonateBot"),
     ],
    [
         InlineKeyboardButton(text="📇 𝙐𝙥𝙙𝙖𝙩𝙚𝙨", url=f"http://t.me/{UPDATE_CHANNEL}"),
@@ -238,12 +238,12 @@ def start(update: Update, context: CallbackContext):
                 TIANA_IMG, caption="""*Hᴇʟʟᴏ {} !*
 ───────────────────
 × *I'ᴍ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
-× *Could you settle for a smile, and a fond farewell?*
+× *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
 ───────────────────
 × *Uᴘᴛɪᴍᴇ:* `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
 ───────────────────
-× *Pᴏᴡᴇʀᴇᴅ Bʏ: Tempest*
+× *Pᴏᴡᴇʀᴇᴅ Bʏ: Tᴇᴀᴍ Tɪᴀɴᴀ*
 ───────────────────""".format(
                     escape_markdown(first_name),
                     escape_markdown(uptime),
@@ -251,7 +251,8 @@ def start(update: Update, context: CallbackContext):
                     sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(
                  [
-                   [InlineKeyboardButton(text="🫂 Support", url=f"https://t.me/{SUPPORT_CHAT}")]
+                  [InlineKeyboardButton(text="📄 Source", callback_data="tiana_source"), 
+                   InlineKeyboardButton(text="🫂 Support", url=f"https://t.me/{SUPPORT_CHAT}")]
                  ]
               ),
                 parse_mode=ParseMode.MARKDOWN,              
@@ -399,7 +400,6 @@ def tiana_callback_handler(update, context):
     elif query.data == "tiana_help":
         query.message.edit_text(
             text=f"""*Nᴇᴡ  Tᴏ  {BOT_NAME}!  Hᴇʀᴇ  Is  Tʜᴇ  Qᴜɪᴄᴋ  Sᴛᴀʀᴛ  Gᴜɪᴅᴇ  Wʜɪᴄʜ  Wɪʟʟ  Hᴇʟᴘ  Yᴏᴜ  Tᴏ  Uɴᴅᴇʀsᴛᴀɴᴅ  Wʜᴀᴛ  Is  {BOT_NAME}  Aɴᴅ  Hᴏᴡ  Tᴏ  Usᴇ  Iᴛ.
-
 Cʟɪᴄᴋ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴ  Tᴏ  Aᴅᴅ  Bᴏᴛ  Iɴ  Yᴏᴜʀ  Gʀᴏᴜᴘ. Bᴀsɪᴄ  Tᴏᴜʀ  Sᴛᴀʀᴛᴇᴅ  Tᴏ  Kɴᴏᴡ  Aʙᴏᴜᴛ  Hᴏᴡ  Tᴏ  Usᴇ  Mᴇ*""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -413,11 +413,10 @@ Cʟɪᴄᴋ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴ  Tᴏ  Aᴅᴅ  Bᴏᴛ  Iɴ  Yᴏᴜ
     elif query.data == "tiana_helpa":
         query.message.edit_text(
             text=f"""<b>Hᴇʏ,  Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cᴏɴғɪɢᴜʀᴀᴛɪᴏɴ  Tᴜᴛᴏʀɪᴀʟ
-
 Bᴇғᴏʀᴇ  Wᴇ  Gᴏ,  I  Nᴇᴇᴅ  Aᴅᴍɪɴ  Pᴇʀᴍɪssɪᴏɴs  Iɴ  Tʜɪs  Cʜᴀᴛ  Tᴏ  Wᴏʀᴋ  Pʀᴏᴘᴇʀʟʏ.
 1). Cʟɪᴄᴋ  Mᴀɴᴀɢᴇ  Gʀᴏᴜᴘ.
 2). Gᴏ  Tᴏ  Aᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs  Aɴᴅ  Aᴅᴅ</b>  {BOT_USERNAME}  <b>As  Aᴅᴍɪɴ.
-3). Gɪᴠɪɴɢ  Fᴜʟʟ  Pᴇʀᴍɪssɪᴏɴs  Mᴀᴋᴇ  Guts  Fᴜʟʟʏ  Usᴇғᴜʟ</b>""",
+3). Gɪᴠɪɴɢ  Fᴜʟʟ  Pᴇʀᴍɪssɪᴏɴs  Mᴀᴋᴇ  Tɪᴀɴᴀ  Fᴜʟʟʏ  Usᴇғᴜʟ</b>""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
               [[InlineKeyboardButton(text="⬅️", callback_data="tiana_help"),
@@ -428,18 +427,14 @@ Bᴇғᴏʀᴇ  Wᴇ  Gᴏ,  I  Nᴇᴇᴅ  Aᴅᴍɪɴ  Pᴇʀᴍɪssɪᴏɴs  
     elif query.data == "tiana_helpb":
         query.message.edit_text(
             text="""*Cᴏɴɢʀᴀɢᴜʟᴀᴛɪᴏɴs,  Tʜɪꜱ  Bᴏᴛ  Nᴏᴡ  Rᴇᴀᴅʏ  Tᴏ  Mᴀɴᴀɢᴇ  Yᴏᴜʀ  Gʀᴏᴜᴘ
-
-Hᴇʀᴇ  Aʀᴇ  Sᴏᴍᴇ  Essᴇɴᴛɪᴀʟᴛ  Tᴏ  Tʀʏ  Oɴ Guts.
-
+Hᴇʀᴇ  Aʀᴇ  Sᴏᴍᴇ  Essᴇɴᴛɪᴀʟᴛ  Tᴏ  Tʀʏ  Oɴ Tɪᴀɴᴀ.
 ×  Aᴅᴍɪɴ  Tᴏᴏʟs
 ʙᴀsɪᴄ  ᴀᴅᴍɪɴ  ᴛᴏᴏʟs  ʜᴇʟᴘ  ʏᴏᴜ  ᴛᴏ  ᴘʀᴏᴛᴇᴄᴛ  ᴀɴᴅ  ᴘᴏᴡᴇʀᴜᴘ  ʏᴏᴜʀ  ɢʀᴏᴜᴘ
 ʏᴏᴜ  ᴄᴀɴ  ʙᴀɴ  ᴍᴇᴍʙᴇʀs,  ᴋɪᴄᴋ  ᴍᴇᴍʙᴇʀs,  ᴘʀᴏᴍᴏᴛᴇ  sᴏᴍᴇᴏɴᴇ  ᴀs  ᴀᴅᴍɪɴ  ᴛʜʀᴏᴜɢʜ  ᴄᴏᴍᴍᴀɴᴅs  ᴏғ  ʙᴏᴛ
-
 ×  Wᴇʟᴄᴏᴍᴇs
 ʟᴇᴛs  sᴇᴛ  ᴀ  ᴡᴇʟᴄᴏᴍᴇ  ᴍᴇssᴀɢᴇ  ᴛᴏ  ᴡᴇʟᴄᴏᴍᴇ  ɴᴇᴡ  ᴜsᴇʀs  ᴄᴏᴍɪɴɢ  ᴛᴏ  ʏᴏᴜʀ  ɢʀᴏᴜᴘ
 sᴇɴᴅ  /setwelcome  [ᴍᴇssᴀɢᴇ]  ᴛᴏ  sᴇᴛ  ᴀ  ᴡᴇʟᴄᴏᴍᴇ  ᴍᴇssᴀɢᴇ
 ᴀʟsᴏ  ʏᴏᴜ  ᴄᴀɴ  sᴛᴏᴘ  ᴇɴᴛᴇʀɪɴɢ  ʀᴏʙᴏᴛs  ᴏʀ  sᴘᴀᴍᴍᴇʀs  ᴛᴏ  ʏᴏᴜʀ  ᴄʜᴀᴛ  ʙʏ  sᴇᴛᴛɪɴɢ  ᴡᴇʟᴄᴏᴍᴇ  ᴄᴀᴘᴛᴄʜᴀ  
-
 Rᴇғᴇʀ  Hᴇʟᴘ  Mᴇɴᴜ  Tᴏ  Sᴇᴇ  Eᴠᴇʀʏᴛʜɪɴɢ  Iɴ  Dᴇᴛᴀɪʟ*""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -456,7 +451,6 @@ Rᴇғᴇʀ  Hᴇʟᴘ  Mᴇɴᴜ  Tᴏ  Sᴇᴇ  Eᴠᴇʀʏᴛʜɪɴɢ  Iɴ  D
 ғᴏʀ  ᴇxᴀᴍᴘʟᴇ  ɪғ  ɪ  ғɪʟᴛᴇʀ  ᴡᴏʀᴅ  'ʜᴇʟʟᴏ'  ᴀɴᴅ  sᴇᴛ  ʀᴇᴘʟʏ  ᴀs  'ʜɪ'
 ʙᴏᴛ  ᴡɪʟʟ  ʀᴇᴘʟʏ  ᴀs  'ʜɪ'  ᴡʜᴇɴ  sᴏᴍᴇᴏɴᴇ  sᴀʏ  'ʜᴇʟʟᴏ'
 ʏᴏᴜ  ᴄᴀɴ  ᴀᴅᴅ  ғɪʟᴛᴇʀs  ʙʏ  sᴇɴᴅɪɴɢ  /filter  ғɪʟᴛᴇʀ  ɴᴀᴍᴇ
-
 × Aɪ  CʜᴀᴛBᴏᴛ
 ᴡᴀɴᴛ  sᴏᴍᴇᴏɴᴇ  ᴛᴏ  ᴄʜᴀᴛ  ɪɴ  ɢʀᴏᴜᴘ?
 Tɪᴀɴᴀ  ʜᴀs  ᴀɴ  ɪɴᴛᴇʟʟɪɢᴇɴᴛ  ᴄʜᴀᴛʙᴏᴛ  ᴡɪᴛʜ  ᴍᴜʟᴛɪʟᴀɴɢ  sᴜᴘᴘᴏʀᴛ
@@ -476,10 +470,8 @@ Sᴇɴᴅ  /chatbot  Oɴ  Aɴᴅ  Rᴇᴘʟʏ  Tᴏ  Aɴʏ  Oғ  Mʏ  Mᴇssᴀ�
 ʏᴏᴜ  ᴄᴀɴ  sᴀᴠᴇ  ᴍᴇssᴀɢᴇ/ᴍᴇᴅɪᴀ/ᴀᴜᴅɪᴏ  ᴏʀ  ᴀɴʏᴛʜɪɴɢ  ᴀs  ɴᴏᴛᴇs ᴜsɪɴɢ /notes
 ᴛᴏ  ɢᴇᴛ  ᴀ  ɴᴏᴛᴇ  sɪᴍᴘʟʏ  ᴜsᴇ  #  ᴀᴛ  ᴛʜᴇ  ʙᴇɢɪɴɴɪɴɢ  ᴏғ  ᴀ  ᴡᴏʀᴅ
 sᴇᴇ  ᴛʜᴇ  ɪᴍᴀɢᴇ..
-
 × Sᴇᴛᴛɪɴɢ  Uᴘ  Nɪɢʜᴛᴍᴏᴅᴇ
 ʏᴏᴜ  ᴄᴀɴ  sᴇᴛ  ᴜᴘ  ɴɪɢʜᴛᴍᴏᴅᴇ  ᴜsɪɴɢ  /nightmode  ᴏɴ/ᴏғғ  ᴄᴏᴍᴍᴀɴᴅ.
-
 Nᴏᴛᴇ-  ɴɪɢʜᴛ  ᴍᴏᴅᴇ  ᴄʜᴀᴛs  ɢᴇᴛ  ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ  ᴄʟᴏsᴇᴅ  ᴀᴛ  12ᴘᴍ(ɪsᴛ)
 ᴀɴᴅ  ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ  ᴏᴘᴇɴɴᴇᴅ  ᴀᴛ  6ᴀᴍ(ɪsᴛ)  ᴛᴏ  ᴘʀᴇᴠᴇɴᴛ  ɴɪɢʜᴛ  sᴘᴀᴍs.*""",
             parse_mode=ParseMode.MARKDOWN,
@@ -493,15 +485,12 @@ Nᴏᴛᴇ-  ɴɪɢʜᴛ  ᴍᴏᴅᴇ  ᴄʜᴀᴛs  ɢᴇᴛ  ᴀᴜᴛᴏᴍ�
     elif query.data == "tiana_term":
         query.message.edit_text(
             text=f"""✗ *Terms and Conditions:*
-
 - Only your first name, last name (if any) and username (if any) is stored for a convenient communication!
 - No group ID or it's messages are stored, we respect everyone's privacy.
 - Messages between Bot and you is only infront of your eyes and there is no backuse of it.
 - Watch your group, if someone is spamming your group, you can use the report feature of your Telegram Client.
 - Do not spam commands, buttons, or anything in bot PM.
-
 *NOTE:* Terms and Conditions might change anytime
-
 *Updates Channel:* @{UPDATE_CHANNEL}
 *Support Chat:* @{SUPPORT_GROUP}""",
             parse_mode=ParseMode.MARKDOWN,
@@ -514,14 +503,10 @@ Nᴏᴛᴇ-  ɴɪɢʜᴛ  ᴍᴏᴅᴇ  ᴄʜᴀᴛs  ɢᴇᴛ  ᴀᴜᴛᴏᴍ�
     elif query.data == "tiana_helpe":
         query.message.edit_text(
             text="""*× Sᴏ  Nᴏᴡ  Yᴏᴜ  Aʀᴇ  Aᴛ  Tʜᴇ  Eɴᴅ  Oғ  Bᴀsɪᴄ  Tᴏᴜʀ.  Bᴜᴛ  Tʜɪs  Is  Nᴏᴛ  Aʟʟ  I  Cᴀɴ  Dᴏ.
-
 Sᴇɴᴅ  /help  Iɴ  Bᴏᴛ  Pᴍ  Tᴏ  Aᴄᴄᴇss  Hᴇʟᴘ  Mᴇɴᴜ
-
 Tʜᴇʀᴇ  Aʀᴇ  Mᴀɴʏ  Hᴀɴᴅʏ  Tᴏᴏʟs  Tᴏ  Tʀʏ  Oᴜᴛ.  
 Aɴᴅ  Aʟsᴏ  Iғ  Yᴏᴜ  Hᴀᴠᴇ  Aɴʏ  Sᴜɢɢᴇssɪᴏɴs  Aʙᴏᴜᴛ  Mᴇ,  Dᴏɴ'ᴛ  Fᴏʀɢᴇᴛ  Tᴏ  tᴇʟʟ  Tʜᴇᴍ  Tᴏ  Dᴇᴠs
-
 Aɢᴀɪɴ  Tʜᴀɴᴋs  Fᴏʀ  Usɪɴɢ  Mᴇ
-
 × Bʏ  Usɪɴɢ  Tʜɪꜱ  Bᴏᴛ  Yᴏᴜ  Aʀᴇ  Aɢʀᴇᴇᴅ  Tᴏ  Oᴜʀ  Tᴇʀᴍs  &  Cᴏɴᴅɪᴛɪᴏɴs*""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -539,7 +524,7 @@ Aɢᴀɪɴ  Tʜᴀɴᴋs  Fᴏʀ  Usɪɴɢ  Mᴇ
             f"\n\n2.) then promote me as admin and give all permissions except anonymous admin."
             f"\n\n3.) add @{ASS_USERNAME} to your group."
             f"\n\n4.) turn on the video chat first before start to play music."
-            f"\n\n*✗ Lets Enjoy The Guts Music And Join Support Group @GutsXSupport*"
+            f"\n\n*✗ Lets Enjoy The Tiana Music And Join Support Group @PrincexSupport*"
             f"\n\n*✗ Pᴏᴡᴇʀᴇᴅ Bʏ:* @{UPDATE_CHANNEL}",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -556,28 +541,19 @@ Aɢᴀɪɴ  Tʜᴀɴᴋs  Fᴏʀ  Usɪɴɢ  Mᴇ
     elif query.data == "tiana_musica":
         query.message.edit_text(
             text="""✗*Here is the help for Play Commands*:
-
-*Note*: Guts Music Bot works on a single merged commands for Music and Video
-
+*Note*: Tiana Music Bot works on a single merged commands for Music and Video
 ✗ *Youtube and Telegram Files*:
-
 /play [Reply to any Video or Audio] or [YT Link] or [Music Name]  
 - Stream Video or Music on Voice Chat by selecting inline Buttons you get
-
-
-✗ *Guts Database Saved Playlists*:
-
+✗ *Tiana Database Saved Playlists*:
 /createplaylist
-- Create Your Playlist on Guts's Server with Custom Name
-
+- Create Your Playlist on Tiana's Server with Custom Name
 /playlist 
 - Check Your Saved Playlist On Servers.
-
 /deleteplaylist
 - Delete any saved music in your playlist
-
 /playplaylist 
-- Start playing Your Saved Playlist on Guts Servers.""",
+- Start playing Your Saved Playlist on Tiana Servers.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -587,35 +563,22 @@ Aɢᴀɪɴ  Tʜᴀɴᴋs  Fᴏʀ  Usɪɴɢ  Mᴇ
     elif query.data == "tiana_musicb":
         query.message.edit_text(
             text="""✗ *Here is the help for Admin Commands*:
-
-
 ✗ *Admin Commands*:
-
 /pause 
 - Pause the playing music on voice chat.
-
 /resume
 - Resume the paused music on voice chat.
-
 /skip
 - Skip the current playing music on voice chat
-
 /end or /stop
 - Stop the playout.
-
-
 ✗ *Authorised Users List*:
-
-Guts has a additional feature for non-admin users who want to use admin commands
+Tiana has a additional feature for non-admin users who want to use admin commands
 -Auth users can skip, pause, stop, resume Voice Chats even without Admin Rights.
-
-
 /auth [Username or Reply to a Message] 
 - Add a user to AUTH LIST of the group.
-
 /unauth [Username or Reply to a Message] 
 - Remove a user from AUTH LIST of the group.
-
 /authusers 
 - Check AUTH LIST of the group.""",
             parse_mode=ParseMode.MARKDOWN,
@@ -627,17 +590,12 @@ Guts has a additional feature for non-admin users who want to use admin commands
     elif query.data == "tiana_musicc":
         query.message.edit_text(
             text="""✗ *Here is the help for Bot Commands*:
-
-
 /start 
 - Start the Tiana Music Bot.
-
 /help 
 - Get Commands Helper Menu with detailed explanations of commands.
-
 /settings 
 - Get Settings dashboard of a group. You can manage Auth Users Mode. Commands Mode from here.
-
 /ping
 - Ping the Bot and check Ram, Cpu etc stats of Tiana.""",
             parse_mode=ParseMode.HTML,
@@ -648,21 +606,14 @@ Guts has a additional feature for non-admin users who want to use admin commands
     elif query.data == "tiana_musicd":
         query.message.edit_text(
             text=""" *Here is the help for Extra Commands*:
-
-
-
 /lyrics [Music Name]
 - Searches Lyrics for the particular Music on web.
-
 /sudolist 
 - Check Sudo Users of Tiana Music Bot
-
 /song [Track Name] or [YT Link]
 - Download any track from youtube in mp3 or mp4 formats via Tiana.
-
 /queue
 - Check Queue List of Music.
-
 /cleanmode [Enable|Disable]
 - When enabled, Tiana will be deleting her 3rd last message to keep your chat clean.""",
             parse_mode=ParseMode.HTML,
@@ -721,7 +672,6 @@ Support
             text="""*Here is the help for the tools module:
 We promise to keep you latest up-date with the latest technology on telegram. 
 we updradge TianaBot everyday to simplifie use of telegram and give a better exprince to users.
-
 Click on below buttons and check amazing tools for users.*""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -746,7 +696,6 @@ Click on below buttons and check amazing tools for users.*""",
     elif query.data == "tiana_toola":
         query.message.edit_text(
             text="""「 Hᴇʟᴘ ᴏғ Sᴇᴀʀᴄʜ 」:
-
  ❍ /google text: Perform a google search
  ❍ /img text: Search Google for images and returns them
  ❍ /app appname: Searches for an app in Play Store and returns its details.
@@ -759,9 +708,7 @@ Click on below buttons and check amazing tools for users.*""",
     elif query.data == "tiana_toolb":
         query.message.edit_text(
             text="""「 Hᴇʟᴘ ᴏғ Tᴀɢᴀʟʟ 」:
-
  ❍ /tagall or @all '(reply to message or add another message) To mention all members in your group, without exception.
-
 Note- Only admins can Use Tagall Command.""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -771,10 +718,8 @@ Note- Only admins can Use Tagall Command.""",
     elif query.data == "tiana_toolc":
         query.message.edit_text(
             text="""「 Hᴇʟᴘ ᴏғ Kᴀʀᴍᴀ 」:
-
 UPVOTE - Use upvote keywords like "+", "+1", "thanks" etc to upvote a cb.message.
 DOWNVOTE - Use downvote keywords like "-", "-1", etc to downvote a cb.message.
-
 - /karma ON/OFF: Enable/Disable karma in group. 
 - /karma Reply to a message: Check user's karma
 - /karma: Chek karma list of top 10 users""",
@@ -786,7 +731,6 @@ DOWNVOTE - Use downvote keywords like "-", "-1", etc to downvote a cb.message.
     elif query.data == "tiana_toold":
         query.message.edit_text(
             text="""「 Hᴇʟᴘ ᴏғ Fᴏɴᴛ Gᴇɴ 」:
-
  - /weebify text: weebify your text!
  - /bis text: bold your text!
  - /bi text: bold-italic your text!
@@ -803,7 +747,6 @@ DOWNVOTE - Use downvote keywords like "-", "-1", etc to downvote a cb.message.
     elif query.data == "tiana_toole":
         query.message.edit_text(
             text="""「 Hᴇʟᴘ ᴏғ Pᴀꜱᴛᴇ 」:
-
  ❍ /paste: Saves replied content to replies with a url""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -813,7 +756,6 @@ DOWNVOTE - Use downvote keywords like "-", "-1", etc to downvote a cb.message.
     elif query.data == "tiana_toolf":
         query.message.edit_text(
             text="""「 Hᴇʟᴘ ᴏғ Tᴇʟᴇɢʀᴀᴘʜ 」:
-
  ❍ /tm :Get Telegraph Link Of Replied Media
  ❍ /txt :Get Telegraph Link of Replied Text""",
             parse_mode=ParseMode.HTML,
@@ -824,7 +766,6 @@ DOWNVOTE - Use downvote keywords like "-", "-1", etc to downvote a cb.message.
     elif query.data == "tiana_source":
         query.message.edit_text(
             text="""*Tianabot is Now Open Source Bot Project.*
-
 *Click below Button to Get Source Code.*""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -860,6 +801,7 @@ def tiana_about_callback(update: Update, context: CallbackContext):
                [
                  [
                      InlineKeyboardButton(text="❗️ 𝘼𝙗𝙤𝙪𝙩", callback_data="tiana_about"),
+                     InlineKeyboardButton(text="📄 𝙎𝙤𝙪𝙧𝙘𝙚", callback_data="tiana_source"),
                  ],
                  [  
                     InlineKeyboardButton(text="🫂 𝙎𝙪𝙥𝙥𝙤𝙧𝙩", callback_data="tiana_support"),
@@ -1170,7 +1112,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", ("𝙂𝙪𝙩𝙨 𝙐𝙥𝙙𝙖𝙩𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮✅")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝙏𝙞𝙖𝙣𝙖𝘽𝙤𝙩 𝙐𝙥𝙙𝙖𝙩𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮✅")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
