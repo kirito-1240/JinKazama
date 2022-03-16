@@ -315,7 +315,12 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Count'."
         disaster_level_present = True
-
+    
+    if disaster_level_present:
+        text += ' [<a href="https://t.me/Freia_Updates/5">◉</a>]'.format(
+            bot.username,
+        )
+        
     try:
         user_member = chat.get_member(user.id)
         if user_member.status == "administrator":
