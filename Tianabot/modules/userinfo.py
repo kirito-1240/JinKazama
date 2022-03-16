@@ -319,7 +319,8 @@ def info(update: Update, context: CallbackContext):
      if disaster_level_present:
         text += ' [<a href="https://t.me/GutsXSupport/3309">◉</a>]'.format(
             bot.username,
-            
+        )
+        
     try:
         user_member = chat.get_member(user.id)
         if user_member.status == "administrator":
