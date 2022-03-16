@@ -316,7 +316,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'Count'."
         disaster_level_present = True
 
-        if disaster_level_present:
+     if disaster_level_present:
         text += ' [<a href="https://t.me/GutsXSupport/3309">◉</a>]'.format(
             bot.username,
             
