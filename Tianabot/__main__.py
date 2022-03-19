@@ -99,7 +99,6 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="👩‍💻 𝙄𝙣𝙛𝙤", callback_data="about_"),
-        InlineKeyboardButton(text="𝘿𝙤𝙣𝙖𝙩𝙚 💰", url="https://t.me/KIRITO_1240"),
     ],
    [
         InlineKeyboardButton(text="📇 𝙐𝙥𝙙𝙖𝙩𝙚𝙨", url=f"http://t.me/{UPDATE_CHANNEL}"),
