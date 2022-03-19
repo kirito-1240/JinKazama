@@ -20,7 +20,7 @@ def speedtestxyz(update: Update, context: CallbackContext):
         ]
     ]
     update.effective_message.reply_text(
-        "Select Ping Mode", reply_markup=InlineKeyboardMarkup(buttons)
+        "Select Speed Test Mode", reply_markup=InlineKeyboardMarkup(buttons)
     )
 
 
@@ -29,12 +29,12 @@ def speedtestxyz_callback(update: Update, context: CallbackContext):
     query = update.callback_query
 
     if query.from_user.id in DEV_USERS:
-        msg = update.effective_message.edit_text("Pinging...")
+        msg = update.effective_message.edit_text("Soeed Testing...")
         speed = speedtest.Speedtest()
         speed.get_best_server()
         speed.download()
         speed.upload()
-        replymsg = "Ping Result:"
+        replymsg = "Speed Test Result:"
 
         if query.data == "speedtest_image":
             speedtest_image = speed.results.share()
@@ -48,10 +48,10 @@ def speedtestxyz_callback(update: Update, context: CallbackContext):
             replymsg += f"\nDownload: `{convert(result['download'])}Mb/s`\nUpload: `{convert(result['upload'])}Mb/s`\nPing: `{result['ping']}`"
             update.effective_message.edit_text(replymsg, parse_mode=ParseMode.MARKDOWN)
     else:
-        query.answer("You are required to join Heroes Association to use this command.")
+        query.answer("You are required to join Toman to use this command.")
 
 
-SPEED_TEST_HANDLER = DisableAbleCommandHandler("ping", speedtestxyz)
+SPEED_TEST_HANDLER = DisableAbleCommandHandler("speed", speedtestxyz)
 SPEED_TEST_CALLBACKHANDLER = CallbackQueryHandler(
     speedtestxyz_callback, pattern="speedtest_.*"
 )
@@ -59,5 +59,5 @@ SPEED_TEST_CALLBACKHANDLER = CallbackQueryHandler(
 dispatcher.add_handler(SPEED_TEST_HANDLER)
 dispatcher.add_handler(SPEED_TEST_CALLBACKHANDLER)
 
-__command_list__ = ["ping"]
+__command_list__ = ["speed"]
 __handlers__ = [SPEED_TEST_HANDLER, SPEED_TEST_CALLBACKHANDLER]
