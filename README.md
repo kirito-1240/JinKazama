@@ -1,18 +1,17 @@
-<p align="center"><img src="https://telegra.ph/file/8edbffafac3e7f3e8ad10.jpg"></p>
+<p align="center"><img src="https://telegra.ph/file/d88be14f1b58ebcb01960.jpg"></p>
 
 <h4 align="center">
     A Telegram Powerfull Group Managment Bot written in Python using Pyrogram and Telethon.
 </h4>
 <p align="center">
-    <a href="https://t.me/Tiana_Prince_Bot"> Ready-To-Use Bot </a> •
-    <a href="http://www.prince-botz.tk/2022/02/tiana-bot.html?m=1"> Documentation </a> •
-    <a href="https://t.me/TianaxUpdates"> Update Channel </a> •
-    <a href="https://t.me/TianaxSupport"> Support Chat </a> 
+    <a href="https://t.me/GutsXBot"> Ready-To-Use Bot </a> •
+    <a href="https://t.me/GutsXSupport"> Update Channel </a> •
+    <a href="https://t.me/GutsXSupport"> Support Chat </a> 
 </p>
     
 # Tiana Bot
 #### Tiana is a Telegram group managment bot made using Telethon and Pyrogram which makes it modern and faster than most of the exisitng Telegram Chat Managers.
-<p align="center"><img src="https://telegra.ph/file/fae3dd2a2c6e491e4893e.jpg"></p>
+<p align="center"><img src="https://telegra.ph/file/d88be14f1b58ebcb01960.jpg"></p>
 
 #### Tiana's features over other bots:
 - Modern
@@ -25,7 +24,7 @@
 - Smart Ai System
 - Easy To Use
 
-Can be found on Telegram as [@TianaRobot](https://t.me/TIANA_PRINCE_BOT)
+Can be found on Telegram as [@GutsXBot](https://t.me/GutsXBot)
 
 ## Deployment
 First Step!
@@ -33,7 +32,6 @@ First Step!
 Star ⭐ the repository!!
 It really motivates me to continue this project further
 
-Read [Docs](http://www.prince-botz.tk/2022/02/tiana-bot.html?m=1) for Detailed Description and Setup Guide on deploying Bot.
 
 > Click on buttons to expand!
 <details>
@@ -69,7 +67,7 @@ Read [Docs](http://www.prince-botz.tk/2022/02/tiana-bot.html?m=1) for Detailed D
 
 ```console
 $ git clone https://github.com/Prince-Botz/TianaBot
-$ cd TianaBot
+$ cd GutsXBot
 $ pip3 install -U -r requirements.txt
 $ cp sample.env .env
 ```
@@ -82,9 +80,9 @@ $ bash start
 
 ## Contact & Support
 
-- [Telegram Channel](https://t.me/TianaxUpdates)
-- [Telegram Support Group](https://t.me/TianaxSupport)
-- [Contact Owner](https://t.me/PrincexAssistantBot)
+- [Telegram Channel](https://t.me/GutsXSupport)
+- [Telegram Support Group](https://t.me/GutsXSupport)
+- [Contact Owner](https://t.me/KIRITO_1240)
 
 ## License
 
@@ -92,7 +90,6 @@ Distributed under the [GNU General Public License v3.0 License.](https://github.
 
 ## Acknowledgements
 
-Special thanks to these amazing projects/people which/who help power Tiana Bot:
+Special thanks to these amazing projects/people which/who help power Guts Bot:
 
-- [Prince](https://t.me/NoobxCoder) 
-- [Blaze](https://t.me/PiroxPower)
+- [Prince](https://t.me/KIRITO_1240) 
