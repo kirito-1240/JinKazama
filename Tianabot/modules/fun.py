@@ -2,11 +2,11 @@ import html
 import random
 import time
 
-import zerotwobot.modules.fun_strings as fun_strings
-from zerotwobot import dispatcher
-from zerotwobot.modules.disable import DisableAbleCommandHandler
-from zerotwobot.modules.helper_funcs.chat_status import is_user_admin
-from zerotwobot.modules.helper_funcs.extraction import extract_user
+import Tianabot.modules.fun_strings as fun_strings
+from Tianabot import dispatcher
+from Tianabot.modules.disable import DisableAbleCommandHandler
+from Tianabot.modules.helper_funcs.chat_status import is_user_admin
+from Tianabot.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext
