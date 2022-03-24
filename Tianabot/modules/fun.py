@@ -200,6 +200,18 @@ def flirt(update, context):
     reply_text(random.choice(fun.FLIRT_STRINGS))
 
 
+run_aync
+@typing_action
+def hflirt(update, context):
+    #reply to correct message
+    reply_text = (
+        update.effective_message.reply_to_message.reply_text
+        if update.effective_message.reply_text
+        else update.effective_message.reply_text
+    )
+    reply_text(random.choice(fun.HFLIRT_STRINGS)
+               
+               
 run_async
 @typing_action
 def insult(update, context):
@@ -511,7 +523,8 @@ __help__ = """
  ✪ /sanitize*:* Sanitize Your Self
  ✪ /shrug or /cri*:* Get shrug or ToT.
  ✪ /decide*:* Randomly answer yes no etc.
- ✪ /flirt*:* Flirt on your crush.
+ ✪ /flirt*:* Flirt on your crush in English language.
+ ✪ /hflirt*:*  Flirt on your crush in Hindi language.
  ✪ /table*:* Flips a table...
  ✪ runs*:* Reply a random string from an array of replies.
  ✪ /slap*:* Slap a user, or get slapped if not a reply.
@@ -558,6 +571,7 @@ DECIDE_HANDLER = DisableAbleMessageHandler(
     Filters.regex(r"(?i)(Liza|liza)"), decide, friendly="decide"
 )
 FLIRT_HANDLER = DisableAbleCommandHandler("flirt", flirt, pass_args=True)
+HFLIRT_HANDLER = DisableAbleCommandHandler("hflirt", flirt, pass_srgs=True)            
 INSULT_HANDLER = DisableAbleCommandHandler("insult", insult, pass_args=True)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, pass_args=True)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap)
@@ -592,6 +606,7 @@ dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(FLIRT_HANDLER)
+dispatcher.add_handler(HFLIRT_HANDLER)   
 dispatcher.add_handler(INSULT_HANDLER)
 dispatcher.add_handler(RUNS_HANDLER)
 dispatcher.add_handler(SLAP_HANDLER)
