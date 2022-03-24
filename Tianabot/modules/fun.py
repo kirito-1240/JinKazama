@@ -200,10 +200,10 @@ def flirt(update, context):
     reply_text(random.choice(fun.FLIRT_STRINGS))
 
 
-run_aync
+@run_aync
 @typing_action
 def hflirt(update, context):
-    #reply to correct message
+    # reply to correct message
     reply_text = (
         update.effective_message.reply_to_message.reply_text
         if update.effective_message.reply_text
