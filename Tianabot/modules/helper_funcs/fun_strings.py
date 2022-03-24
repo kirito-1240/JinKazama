@@ -290,6 +290,17 @@ FLIRT_STRINGS = (
     "I swear someone stole the stars from the sky and put them in your eyes.",
 )
 
+HFLIRT_STRINGS = (
+    "Doctor Ne Advice Kia Hai Ki Sone Se Pahle Apki Pic Dekh Kar Sona Jaroori Hai, Warna Heart Attack Aa Sakta Hai.",
+    "Ap Itne Cute Ho Ki Agar Mai Msg Na Bhi Karna Chahu.To Bhi Mera Hath Khud Keypad Pr Chalne Lagta Hai.",
+    "Aag joh dil mein lagi hai, usse duniya mein laga doonga main ... joh teri doli uthi, zamaane ko jalaa doonga main",
+    "Jaldi se koi bhagwan ko bulao kyuki ek pari kho gayi hain aur wo pari yaha mujhse chatting kar rahi hain.",
+    "Aap ek camera ki tarah ho jab bhi aapka photos dekhta hu meri automatic smile aaa jati hain",
+    "Aapki aankhe ocean ki tarah blue he aur me usme har baar dub jata hu",
+    "Aap choro ke raja lagte ho kyuki aapne mera dil chura liya hain",
+    "Meri aankho ko kuch ho gaya hain, aap per se hat hi nahi rahi hain",
+)
+
 RUN_STRINGS = (
     "Where do you think you're going?",
     "Huh? what? did they get away?",
