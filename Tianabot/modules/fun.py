@@ -200,7 +200,7 @@ def flirt(update, context):
     reply_text(random.choice(fun.FLIRT_STRINGS))
 
 
-@run_aync
+run_async
 @typing_action
 def hflirt(update, context):
     # reply to correct message
