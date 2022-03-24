@@ -211,12 +211,6 @@ def hflirt(update, context):
     )
     reply_text(random.choice(fun.HFLIRT_STRINGS)
                
-       
-@run_async
-@typing_action
-def dice(update, context):
-    context.bot.sendDice(update.effective_chat.id)
-
 
 @run_async
 @typing_action
