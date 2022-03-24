@@ -211,19 +211,7 @@ def hflirt(update, context):
     )
     reply_text(random.choice(fun.HFLIRT_STRINGS)
                
-               
-@run_async
-@typing_action
-def insult(update, context):
-    # reply to correct message
-    reply_text = (
-        update.effective_message.reply_to_message.reply_text
-        if update.effective_message.reply_text
-        else update.effective_message.reply_text
-    )
-    reply_text(random.choice(fun.INSULT_STRINGS))
-    
-    
+       
 @run_async
 @typing_action
 def dice(update, context):
