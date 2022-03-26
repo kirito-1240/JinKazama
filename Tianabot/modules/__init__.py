@@ -1,4 +1,5 @@
 from Tianabot import LOAD, LOGGER, NO_LOAD
+import sys
 
 
 def __list_all_modules():
