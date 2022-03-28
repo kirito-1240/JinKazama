@@ -9,7 +9,7 @@ from Tianabot.events import register
 from Tianabot import telethn as tbot
 
 
-PHOTO = " https://telegra.ph/file/be2c6c2424910d0c12b4c.jpg"
+PHOTO = "https://telegra.ph/file/e7b1cab140e53ae338b43.mp4"
 
 @register(pattern=("/alive"))
 async def awake(event):
